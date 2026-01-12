@@ -1,3 +1,41 @@
+# Code Craft
+
+## Overview
+Code Craft is a powerful code editor that allows users to write, execute, and share code snippets seamlessly. It provides a user-friendly interface and a variety of features to enhance the coding experience.
+
+## Features
+- **Code Execution**: Run your code snippets in real-time.
+- **Snippet Sharing**: Easily share your code snippets with others.
+- **User Profiles**: Create and manage user profiles to save your snippets.
+- **Custom Themes**: Personalize your coding environment with custom themes.
+
+## Installation
+To get started with Code Craft, clone the repository and install the necessary dependencies:
+
+```bash
+git clone https://github.com/RoshanKumar9421/code-craft.git
+cd code-craft
+npm install
+```
+
+## Usage
+To run the application, use the following command:
+
+```bash
+npm run dev
+```
+
+## Contributing
+Contributions are welcome! Please open an issue or submit a pull request for any enhancements or bug fixes.
+
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Contact
+For any inquiries, please reach out to [your-email@example.com](mailto:your-email@example.com).
+
+---
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
