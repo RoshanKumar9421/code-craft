@@ -6,7 +6,7 @@ export const saveExecution = mutation({
   args: {
     language: v.string(),
     code: v.string(),
-    // we could have either one of them, or both at the same time
+   
     output: v.optional(v.string()),
     error: v.optional(v.string()),
   },
@@ -14,7 +14,7 @@ export const saveExecution = mutation({
     const identity = await ctx.auth.getUserIdentity();
     if (!identity) throw new ConvexError("Not authenticated");
 
-    // check pro status
+   
     const user = await ctx.db
       .query("users")
       .withIndex("by_user_id")
@@ -56,18 +56,18 @@ export const getUserStats = query({
       .filter((q) => q.eq(q.field("userId"), args.userId))
       .collect();
 
-    // Get starred snippets
+   
     const starredSnippets = await ctx.db
       .query("stars")
       .withIndex("by_user_id")
       .filter((q) => q.eq(q.field("userId"), args.userId))
       .collect();
 
-    // Get all starred snippet details to analyze languages
+    
     const snippetIds = starredSnippets.map((star) => star.snippetId);
     const snippetDetails = await Promise.all(snippetIds.map((id) => ctx.db.get(id)));
 
-    // Calculate most starred language
+    
     const starredLanguages = snippetDetails.filter(Boolean).reduce(
       (acc, curr) => {
         if (curr?.language) {
@@ -81,7 +81,7 @@ export const getUserStats = query({
     const mostStarredLanguage =
       Object.entries(starredLanguages).sort(([, a], [, b]) => b - a)[0]?.[0] ?? "N/A";
 
-    // Calculate execution stats
+   
     const last24Hours = executions.filter(
       (e) => e._creationTime > Date.now() - 24 * 60 * 60 * 1000
     ).length;

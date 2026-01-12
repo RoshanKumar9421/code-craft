@@ -134,7 +134,7 @@ export const deleteComment = mutation({
     const comment = await ctx.db.get(args.commentId);
     if (!comment) throw new Error("Comment not found");
 
-    // Check if the user is the comment author
+    
     if (comment.userId !== identity.subject) {
       throw new Error("Not authorized to delete this comment");
     }
