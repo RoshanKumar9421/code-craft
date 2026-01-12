@@ -15,6 +15,41 @@ type LanguageConfig = Record<
 >;
 
 export const LANGUAGE_CONFIG: LanguageConfig = {
+  c: {
+  id: "c",
+  label: "C",
+  logoPath: "/c.png",
+  pistonRuntime: { language: "c", version: "10.2.0" },
+  monacoLanguage: "c",
+  defaultCode: `#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+   printf("Try Code Craft");
+
+    return 0;
+}`,
+},
+
+cpp: {
+    id: "cpp",
+    label: "C++",
+    logoPath: "/cpp.png",
+    pistonRuntime: { language: "cpp", version: "10.2.0" },
+    monacoLanguage: "cpp",
+    defaultCode: `#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <numeric>
+
+int main() {
+   
+ cout<<"Try Code Craft"<<endl;
+    
+    return 0;
+}`,
+  },
+  
   javascript: {
     id: "javascript",
     label: "JavaScript",
@@ -212,103 +247,8 @@ func main() {
     println!("Sum of numbers: {}", sum);
 }`,
   },
-  cpp: {
-    id: "cpp",
-    label: "C++",
-    logoPath: "/cpp.png",
-    pistonRuntime: { language: "cpp", version: "10.2.0" },
-    monacoLanguage: "cpp",
-    defaultCode: `#include <iostream>
-#include <vector>
-#include <algorithm>
-#include <numeric>
-
-int main() {
-    // Create vector
-    std::vector<int> numbers = {1, 2, 3, 4, 5};
-    
-    // Print original numbers
-    std::cout << "Original numbers: ";
-    for (int n : numbers) std::cout << n << " ";
-    std::cout << std::endl;
-    
-    // Calculate squares
-    std::vector<int> squares;
-    std::transform(numbers.begin(), numbers.end(), 
-                  std::back_inserter(squares),
-                  [](int n) { return n * n; });
-    
-    std::cout << "Squared numbers: ";
-    for (int n : squares) std::cout << n << " ";
-    std::cout << std::endl;
-    
-    // Filter even numbers
-    std::cout << "Even numbers: ";
-    for (int n : numbers) {
-        if (n % 2 == 0) std::cout << n << " ";
-    }
-    std::cout << std::endl;
-    
-    // Calculate sum
-    int sum = std::accumulate(numbers.begin(), numbers.end(), 0);
-    std::cout << "Sum of numbers: " << sum << std::endl;
-    
-    return 0;
-}`,
-  },
   
-  c: {
-  id: "c",
-  label: "C",
-  logoPath: "/c.png",
-  pistonRuntime: { language: "c", version: "10.2.0" },
-  monacoLanguage: "c",
-  defaultCode: `#include <stdio.h>
-#include <stdlib.h>
-
-int main() {
-    // Create array
-    int numbers[] = {1, 2, 3, 4, 5};
-    int size = sizeof(numbers) / sizeof(numbers[0]);
-
-    // Print original numbers
-    printf("Original numbers: ");
-    for (int i = 0; i < size; i++) {
-        printf("%d ", numbers[i]);
-    }
-    printf("\\n");
-
-    // Calculate squares
-    int squares[size];
-    for (int i = 0; i < size; i++) {
-        squares[i] = numbers[i] * numbers[i];
-    }
-
-    printf("Squared numbers: ");
-    for (int i = 0; i < size; i++) {
-        printf("%d ", squares[i]);
-    }
-    printf("\\n");
-
-    // Filter even numbers
-    printf("Even numbers: ");
-    for (int i = 0; i < size; i++) {
-        if (numbers[i] % 2 == 0) {
-            printf("%d ", numbers[i]);
-        }
-    }
-    printf("\\n");
-
-    // Calculate sum
-    int sum = 0;
-    for (int i = 0; i < size; i++) {
-        sum += numbers[i];
-    }
-    printf("Sum of numbers: %d\\n", sum);
-
-    return 0;
-}`,
-},
+  
 
   csharp: {
     id: "csharp",
