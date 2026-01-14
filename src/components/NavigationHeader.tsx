@@ -1,4 +1,4 @@
-//import HeaderProfileBtn from "@/app/(root)/_components/HeaderProfileBtn";
+
 import HeaderProfileBtn from "../app/(root)/_components/HeaderprofileBtn";
 import { SignedOut } from "@clerk/nextjs";
 import { Blocks, Code2, Sparkles } from "lucide-react";
@@ -11,15 +11,15 @@ function NavigationHeader() {
       <div className="max-w-7xl mx-auto px-4">
         <div className="relative h-16 flex items-center justify-between">
           <div className="flex items-center gap-8">
-            {/* Logo */}
+            
             <Link href="/" className="flex items-center gap-3 group relative">
-              {/* logo hover effect */}
+             
               <div
                 className="absolute -inset-2 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-lg opacity-0 
               group-hover:opacity-100 transition-all duration-500 blur-xl"
               />
 
-              {/* Logo */}
+             
               <div className="relative bg-gradient-to-br from-[#1a1a2e] to-[#0a0a0f] p-2 rounded-xl ring-1 ring-white/10 group-hover:ring-white/20 transition-all">
                 <Blocks className="w-6 h-6 text-blue-400 transform -rotate-6 group-hover:rotate-0 transition-transform duration-500" />
               </div>
@@ -37,7 +37,7 @@ function NavigationHeader() {
               </div>
             </Link>
 
-            {/* snippets Link */}
+           
             <Link
               href="/snippets"
               className="relative group flex items-center gap-2 px-4 py-1.5 rounded-lg text-gray-300 bg-gray-800/50 hover:bg-blue-500/10 
@@ -54,7 +54,7 @@ function NavigationHeader() {
             </Link>
           </div>
 
-          {/* right rection */}
+
           <div className="flex items-center gap-4">
             <SignedOut>
               <Link
@@ -71,7 +71,7 @@ function NavigationHeader() {
               </Link>
             </SignedOut>
 
-            {/* profile button */}
+          
             <HeaderProfileBtn />
           </div>
         </div>

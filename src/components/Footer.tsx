@@ -10,13 +10,13 @@ function Footer() {
       <div className="max-w-7xl mx-auto px-4 py-8">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
 
-          {/* Left side */}
+         
           <div className="flex items-center gap-2 text-gray-400">
             <Blocks className="size-5" />
             <span>Built for developers, by Roshan Kumar</span>
           </div>
 
-          {/* Social icons */}
+        
           <div className="flex items-center gap-5">
             <a
               href="https://github.com/RoshanKumar9421"
@@ -49,7 +49,7 @@ function Footer() {
             </a>
           </div>
 
-          {/* Footer links */}
+          
           <div className="flex items-center gap-6">
             <Link href="/support" className="text-gray-400 hover:text-gray-300 transition-colors">
               Support
