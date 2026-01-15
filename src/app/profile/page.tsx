@@ -1,13 +1,11 @@
 
 
-
 "use client";
 import { useUser } from "@clerk/nextjs";
 import { usePaginatedQuery, useQuery } from "convex/react";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { api } from "../../../convex/_generated/api";
-//import NavigationHeader from "@/components/NavigationHeader";
 import NavigationHeader from "@/src/components/NavigationHeader";
 import ProfileHeader from "./_components/ProfileHeader";
 import ProfileHeaderSkeleton from "./_components/ProfileHeaderSkeleton";
@@ -15,7 +13,6 @@ import { ChevronRight, Clock, Code, ListVideo, Loader2, Star } from "lucide-reac
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-//import StarButton from "@/components/StarButton";
 import StarButton from "@/src/components/StarButton";
 import CodeBlock from "./_components/CodeBlock";
 
@@ -69,7 +66,7 @@ function ProfilePage() {
       <NavigationHeader />
 
       <div className="max-w-7xl mx-auto px-4 py-12">
-        {/* Profile Header */}
+        
 
         {userStats && userData && (
           <ProfileHeader userStats={userStats} userData={userData} user={user!} />
@@ -77,12 +74,12 @@ function ProfilePage() {
 
         {(userStats === undefined || !isLoaded) && <ProfileHeaderSkeleton />}
 
-        {/* Main content */}
+       
         <div
           className="bg-gradient-to-br from-[#12121a] to-[#1a1a2e] rounded-3xl shadow-2xl 
         shadow-black/50 border border-gray-800/50 backdrop-blur-xl overflow-hidden"
         >
-          {/* Tabs */}
+          
           <div className="border-b border-gray-800/50">
             <div className="flex space-x-1 p-4">
               {TABS.map((tab) => (
@@ -111,7 +108,7 @@ function ProfilePage() {
             </div>
           </div>
 
-          {/* Tab content */}
+         
           <AnimatePresence mode="wait">
             <motion.div
               key={activeTab}
@@ -121,7 +118,7 @@ function ProfilePage() {
               transition={{ duration: 0.2 }}
               className="p-6"
             >
-              {/* ACTIVE TAB IS EXECUTIONS: */}
+            
               {activeTab === "executions" && (
                 <div className="space-y-6">
                   {executions?.map((execution) => (
@@ -204,7 +201,7 @@ function ProfilePage() {
                     )
                   )}
 
-                  {/* Load More Button */}
+                 
                   {executionStatus === "CanLoadMore" && (
                     <div className="flex justify-center mt-8">
                       <button
@@ -220,7 +217,7 @@ function ProfilePage() {
                 </div>
               )}
 
-              {/* ACTIVE TAB IS STARS: */}
+             
               {activeTab === "starred" && (
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {starredSnippets?.map((snippet) => (
