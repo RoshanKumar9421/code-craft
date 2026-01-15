@@ -19,12 +19,10 @@ function LanguageSelector({ hasAccess }: Props) {
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   const { language, setLanguage } = useCodeEditorStore();
-
-  // ✅ SAFE fallback (this FIXES your runtime error)
   const currentLanguageObj =
     LANGUAGE_CONFIG[language] ?? LANGUAGE_CONFIG["c"];
 
-  // ✅ Close dropdown on outside click (only when open)
+  
   useEffect(() => {
     if (!isOpen) return;
 
@@ -52,7 +50,7 @@ function LanguageSelector({ hasAccess }: Props) {
 
   return (
     <div className="relative" ref={dropdownRef}>
-      {/* Trigger Button */}
+     
       <motion.button
         whileHover={{ scale: 1.02 }}
         whileTap={{ scale: 0.98 }}
@@ -68,13 +66,13 @@ function LanguageSelector({ hasAccess }: Props) {
           : ""
         }`}
       >
-        {/* Background hover effect */}
+       
         <div
           className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/5
           rounded-lg opacity-0 group-hover:opacity-100 transition-opacity"
         />
 
-        {/* Language Icon */}
+
         <div className="size-6 rounded-md bg-gray-800/50 p-0.5 group-hover:scale-110 transition-transform">
           <Image
             src={currentLanguageObj.logoPath}
@@ -85,19 +83,19 @@ function LanguageSelector({ hasAccess }: Props) {
           />
         </div>
 
-        {/* Language Label */}
+       
         <span className="text-gray-200 min-w-[80px] text-left group-hover:text-white transition-colors">
           {currentLanguageObj.label}
         </span>
 
-        {/* Arrow */}
+      
         <ChevronDownIcon
           className={`size-4 text-gray-400 transition-transform duration-300
           ${isOpen ? "rotate-180" : ""}`}
         />
       </motion.button>
 
-      {/* Dropdown */}
+     
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -144,7 +142,7 @@ function LanguageSelector({ hasAccess }: Props) {
                           : "hover:bg-[#262637]"
                       }`}
                     >
-                      {/* Icon */}
+                     
                       <div
                         className={`size-8 rounded-lg p-1.5 transition-transform
                         ${
@@ -162,12 +160,12 @@ function LanguageSelector({ hasAccess }: Props) {
                         />
                       </div>
 
-                      {/* Label */}
+                     
                       <span className="flex-1 text-left">
                         {lang.label}
                       </span>
 
-                      {/* Status Icon */}
+                    
                       {isLocked ? (
                         <Lock className="w-4 h-4 text-gray-500" />
                       ) : (

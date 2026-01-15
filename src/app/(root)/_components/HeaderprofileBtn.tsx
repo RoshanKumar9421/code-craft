@@ -1,6 +1,5 @@
 "use client";
 import LoginButton from "@/src/components/LoginButton";
-//import LoginButton from "@/components/LoginButton";
 import { SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
 import { User } from "lucide-react";
 

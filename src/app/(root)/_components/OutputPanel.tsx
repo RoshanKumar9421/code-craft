@@ -1,6 +1,4 @@
 "use client";
-
-//import { useCodeEditorStore } from "@/store/useCodeEditorStore";
 import { useCodeEditorStore } from "@/src/store/useCodeEditorStore";
 import { AlertTriangle, CheckCircle, Clock, Copy, Terminal } from "lucide-react";
 import { useState } from "react";
@@ -22,7 +20,7 @@ function OutputPanel() {
 
   return (
     <div className="relative bg-[#181825] rounded-xl p-4 ring-1 ring-gray-800/50">
-      {/* Header */}
+     
       <div className="flex items-center justify-between mb-3">
         <div className="flex items-center gap-2">
           <div className="flex items-center justify-center w-6 h-6 rounded-lg bg-[#1e1e2e] ring-1 ring-gray-800/50">
@@ -52,7 +50,7 @@ function OutputPanel() {
         )}
       </div>
 
-      {/* Output Area */}
+     
       <div className="relative">
         <div
           className="relative bg-[#1e1e2e]/50 backdrop-blur-sm border border-[#313244] 

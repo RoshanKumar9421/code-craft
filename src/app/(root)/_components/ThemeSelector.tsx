@@ -1,13 +1,11 @@
 "use client";
-
-//import { useCodeEditorStore } from "@/store/useCodeEditorStore";
 import { useCodeEditorStore } from "@/src/store/useCodeEditorStore";
 import React, { useEffect, useRef, useState } from "react";
-//import { THEMES } from "../_constants";
+
 import {THEMES} from "../_constants"
 import { AnimatePresence, motion } from "framer-motion";
 import { CircleOff, Cloud, Github, Laptop, Moon, Palette, Sun } from "lucide-react";
-//import useMounted from "@/hooks/useMounted";
+
 import useMounted from "@/src/hooks/useMounted";
 
 const THEME_ICONS: Record<string, React.ReactNode> = {
@@ -47,7 +45,7 @@ function ThemeSelector() {
         className="w-48 group relative flex items-center gap-2 px-4 py-2.5 bg-[#1e1e2e]/80 hover:bg-[#262637] 
         rounded-lg transition-all duration-200 border border-gray-800/50 hover:border-gray-700"
       >
-        {/* hover state bg decorator */}
+       
         <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-purple-500/5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity" />
 
         <Palette className="w-4 h-4 text-gray-400 group-hover:text-gray-300 transition-colors" />
@@ -56,7 +54,7 @@ function ThemeSelector() {
           {currentTheme?.label}
         </span>
 
-        {/* color indicator */}
+       
 
         <div
           className="relative w-4 h-4 rounded-full border border-gray-600 group-hover:border-gray-500 transition-colors"
@@ -90,13 +88,13 @@ function ThemeSelector() {
               `}
                 onClick={() => setTheme(t.id)}
               >
-                {/* bg gradient */}
+               
                 <div
                   className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-purple-500/5 opacity-0 
               group-hover:opacity-100 transition-opacity"
                 />
 
-                {/* icon */}
+              
                 <div
                   className={`
                 flex items-center justify-center size-8 rounded-lg
@@ -106,19 +104,19 @@ function ThemeSelector() {
                 >
                   {THEME_ICONS[t.id] || <CircleOff className="w-4 h-4" />}
                 </div>
-                {/* label */}
+               
                 <span className="flex-1 text-left group-hover:text-white transition-colors">
                   {t.label}
                 </span>
 
-                {/* color indicator */}
+                
                 <div
                   className="relative size-4 rounded-full border border-gray-600 
                 group-hover:border-gray-500 transition-colors"
                   style={{ background: t.color }}
                 />
 
-                {/* active theme border */}
+                
                 {theme === t.id && (
                   <motion.div
                     className="absolute inset-0 border-2 border-blue-500/30 rounded-lg"

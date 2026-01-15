@@ -1,6 +1,4 @@
 "use client";
-
-//import { getExecutionResult, useCodeEditorStore } from "@/store/useCodeEditorStore";
 import { getExecutionResult, useCodeEditorStore } from "@/src/store/useCodeEditorStore";
 import { useUser } from "@clerk/nextjs";
 import { useMutation } from "convex/react";
@@ -40,7 +38,7 @@ function RunButton() {
         focus:outline-none
       `}
     >
-      {/* bg wit gradient */}
+    
       <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-500 rounded-xl opacity-100 transition-opacity group-hover:opacity-90" />
 
       <div className="relative flex items-center gap-2.5">
