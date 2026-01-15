@@ -1,16 +1,14 @@
 import CodeBlock from "./CodeBlock";
 
 function CommentContent({ content }: { content: string }) {
-  // regex
+ 
   const parts = content.split(/(```[\w-]*\n[\s\S]*?\n```)/g);
 
   return (
     <div className="max-w-none text-white">
       {parts.map((part, index) => {
         if (part.startsWith("```")) {
-          //           ```javascript
-          // const name = "John";
-          // ```
+          
           const match = part.match(/```([\w-]*)\n([\s\S]*?)\n```/);
 
           if (match) {

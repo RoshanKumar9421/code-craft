@@ -1,11 +1,7 @@
 "use client";
-
-//import { useQuery } from "convex/react";
 import { useQuery } from "convex/react";
 import { api } from "../../../convex/_generated/api";
 import { useState } from "react";
-// import SnippetsPageSkeleton from "./_components/SnippetsPageSkeleton";
-// import NavigationHeader from "@/components/NavigationHeader";
 import SnippetsPageSkeleton from "./_components/SnippetsPageSkeleton";
 import NavigationHeader from "@/src/components/NavigationHeader";
 
@@ -14,13 +10,13 @@ import { BookOpen, Code, Grid, Layers, Search, Tag, X } from "lucide-react";
 import SnippetCard from "./_components/SnippetCard";
 
 function SnippetsPage() {
-  //const snippets = useQuery(api.snippets.getSnippets);
+  
   const snippets =useQuery(api.snippets.getSnippets);
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedLanguage, setSelectedLanguage] = useState<string | null>(null);
   const [view, setView] = useState<"grid" | "list">("grid");
 
-  // loading state
+  
   if (snippets === undefined) {
     return (
       <div className="min-h-screen">
@@ -49,7 +45,7 @@ function SnippetsPage() {
       <NavigationHeader />
 
       <div className="relative max-w-7xl mx-auto px-4 py-12">
-        {/* Hero */}
+        
         <div className="text-center max-w-3xl mx-auto mb-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -78,9 +74,9 @@ function SnippetsPage() {
           </motion.p>
         </div>
 
-        {/* Filters Section */}
+      
         <div className="relative max-w-5xl mx-auto mb-12 space-y-6">
-          {/* Search */}
+          
           <div className="relative group">
             <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500" />
             <div className="relative flex items-center">
@@ -97,7 +93,7 @@ function SnippetsPage() {
             </div>
           </div>
 
-          {/* Filters Bar */}
+          
           <div className="flex flex-wrap items-center gap-4">
             <div className="flex items-center gap-2 px-4 py-2 bg-[#1e1e2e] rounded-lg ring-1 ring-gray-800">
               <Tag className="w-4 h-4 text-gray-400" />
@@ -139,7 +135,7 @@ function SnippetsPage() {
                 {filteredSnippets.length} snippets found
               </span>
 
-              {/* View Toggle */}
+              
               <div className="flex items-center gap-1 p-1 bg-[#1e1e2e] rounded-lg ring-1 ring-gray-800">
                 <button
                   onClick={() => setView("grid")}
@@ -166,7 +162,7 @@ function SnippetsPage() {
           </div>
         </div>
 
-        {/* Snippets Grid */}
+       
         <motion.div
           className={`grid gap-6 ${
             view === "grid"
@@ -182,7 +178,7 @@ function SnippetsPage() {
           </AnimatePresence>
         </motion.div>
 
-        {/* edge case: empty state */}
+       
         {filteredSnippets.length === 0 && (
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
