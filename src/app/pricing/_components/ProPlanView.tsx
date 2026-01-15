@@ -1,4 +1,4 @@
-//import NavigationHeader from "@/components/NavigationHeader";
+
 import NavigationHeader from "@/src/components/NavigationHeader";
 import { ArrowRight, Command, Star } from "lucide-react";
 import Link from "next/link";
