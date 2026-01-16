@@ -3,11 +3,20 @@
 ## Overview
 Code Craft is a powerful code editor that allows users to write, execute, and share code snippets seamlessly. It provides a user-friendly interface and a variety of features to enhance the coding experience.
 
+<img width="1855" height="851" alt="Screenshot (468)" src="https://github.com/user-attachments/assets/983231ac-2600-4588-8b82-793ab9afc9f3" />
+
+<img width="1865" height="887" alt="Screenshot (469)" src="https://github.com/user-attachments/assets/f6b46828-23c7-4580-8f18-43ff28fa5e50" />
+
+<img width="1855" height="843" alt="Screenshot (470)" src="https://github.com/user-attachments/assets/c2348d77-35dd-4803-8d3b-278265b8931f" />
+
+
 ## Features
 - **Code Execution**: Run your code snippets in real-time.
 - **Snippet Sharing**: Easily share your code snippets with others.
 - **User Profiles**: Create and manage user profiles to save your snippets.
 - **Custom Themes**: Personalize your coding environment with custom themes.
+
+- 
 
 ## Installation
 To get started with Code Craft, clone the repository and install the necessary dependencies:
@@ -60,10 +69,7 @@ This project uses [`next/font`](https://nextjs.org/docs/app/building-your-applic
 
 Code-Craft Overview
 
-<img width="1855" height="851" alt="Screenshot (468)" src="https://github.com/user-attachments/assets/983231ac-2600-4588-8b82-793ab9afc9f3" />
 
-<img width="1865" height="887" alt="Screenshot (469)" src="https://github.com/user-attachments/assets/f6b46828-23c7-4580-8f18-43ff28fa5e50" />
 
-<img width="1855" height="843" alt="Screenshot (470)" src="https://github.com/user-attachments/assets/c2348d77-35dd-4803-8d3b-278265b8931f" />
 
 
