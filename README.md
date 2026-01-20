@@ -1,75 +1,105 @@
-# Code Craft
+# 🚀 Code Craft
 
-## Overview
-Code Craft is a powerful code editor that allows users to write, execute, and share code snippets seamlessly. It provides a user-friendly interface and a variety of features to enhance the coding experience.
+Code Craft is a modern, browser-based coding platform that allows users to write, execute, save, and share code snippets instantly — without any local setup. It simplifies coding practice, experimentation, and collaboration through a clean and intuitive interface.
 
-<img width="1855" height="851" alt="Screenshot (468)" src="https://github.com/user-attachments/assets/983231ac-2600-4588-8b82-793ab9afc9f3" />
-
-<img width="1865" height="887" alt="Screenshot (469)" src="https://github.com/user-attachments/assets/f6b46828-23c7-4580-8f18-43ff28fa5e50" />
-
-<img width="1855" height="843" alt="Screenshot (470)" src="https://github.com/user-attachments/assets/c2348d77-35dd-4803-8d3b-278265b8931f" />
+---
 
 
-## Features
-- **Code Execution**: Run your code snippets in real-time.
-- **Snippet Sharing**: Easily share your code snippets with others.
-- **User Profiles**: Create and manage user profiles to save your snippets.
-- **Custom Themes**: Personalize your coding environment with custom themes.
 
-- 
+Learning and sharing code often requires multiple tools such as editors, compilers, and sharing platforms. This fragmented workflow increases setup time and creates barriers for beginners and quick experimentation.
 
-## Installation
-To get started with Code Craft, clone the repository and install the necessary dependencies:
+---
+
+
+
+Code Craft provides an all-in-one web-based environment where users can write and run code directly in the browser, personalize their editor, and share snippets via unique links — eliminating setup overhead and improving productivity.
+
+---
+
+## ✨ Features
+
+- Browser-based code editor with syntax highlighting  
+- Instant code execution  
+- Save and share code snippets via links  
+- User authentication and profiles  
+- Customizable editor themes  
+- Responsive UI for all devices  
+- Secure and sandboxed execution  
+
+---
+
+## 🔄 Process Flow
+
+1. Open Code Craft  
+2. Login / Sign up (optional)  
+3. Select programming language  
+4. Write code in editor  
+5. Execute code  
+6. View output  
+7. Save or share snippet
+
+8. ## 📸 Screenshots
+
+### 🧑‍💻 Code Editor Interface
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/5563fabf-920e-42a4-b89e-8e37c05d27d9" />
+
+
+### ▶️ Code Execution & Output
+<img width="1855" height="851" alt="Screenshot (468)" src="https://github.com/user-attachments/assets/7f416641-eead-4b2d-b6e8-3285321a5785" />
+
+
+### 🔗 Snippet Sharing
+<img width="1855" height="843" alt="Screenshot (470)" src="https://github.com/user-attachments/assets/66d20c25-69e6-4985-8267-6cf67ac170e1" />
+
+
+### 👤 User Profile & Customization
+<img width="1865" height="887" alt="Screenshot (469)" src="https://github.com/user-attachments/assets/53be6746-5d57-4717-9042-02ed6d71e3df" />
+
+
+---
+
+## 🛠 Tech Stack
+
+- **Frontend:** Next.js, TypeScript  
+- **Backend:** Serverless APIs  
+- **Authentication:** Clerk  
+- **Database:** Convex  
+- **Deployment:** Vercel  
+
+---
+
+## 🚀 Opportunities & Impact
+
+- Reduces friction for beginners learning to code  
+- Enables fast prototyping for developers  
+- Useful for educators, interview prep, and collaboration  
+- Strong potential to scale into a learning or assessment platform  
+
+---
+
+## 🔮 Future Enhancements
+
+- Multi-language runtime support  
+- Real-time collaborative coding  
+- AI-assisted code suggestions and debugging  
+- Snippet version history  
+- Classroom and interview modes  
+
+---
+
+## 📦 Installation
 
 ```bash
 git clone https://github.com/RoshanKumar9421/code-craft.git
 cd code-craft
 npm install
-```
-
-## Usage
-To run the application, use the following command:
-
-```bash
 npm run dev
-```
 
-## Contributing
-Contributions are welcome! Please open an issue or submit a pull request for any enhancements or bug fixes.
+🌐 Live Demo
 
-## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+🔗 https://code-craft-taupe.vercel.app/
 
-## Contact
-For any inquiries, please reach out to [your-email@example.com](mailto:your-email@example.com).
+👨‍💻 Author
 
----
-
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
-
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-Code-Craft Overview
-
-
-
-
-
+Roshan Kumar 
+GitHub: https://github.com/RoshanKumar9421
